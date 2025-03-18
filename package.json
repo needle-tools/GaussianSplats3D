@@ -20,6 +20,7 @@
         "build-windows": "npm run build-library-windows && npm run build-demo-windows",
         "watch": "npx npm-watch ",
         "demo": "node util/server.js -d ./build/demo",
+        "serve": "npx serve@6 --ssl ./build/demo",
         "fix-styling": "npx stylelint **/*.scss --fix",
         "fix-js": "npx eslint src --fix",
         "lint": "npx eslint 'src/**/*.js' || true",
@@ -67,7 +68,7 @@
         "url-loader": "4.1.1"
     },
     "peerDependencies": {
-        "three": ">=0.160.0"
+        "three": "@needle-tools/three@0.169.5"
     },
     "files": [
         "build/gaussian-splats-3d.umd.cjs",
